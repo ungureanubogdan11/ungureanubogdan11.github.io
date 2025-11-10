@@ -8,8 +8,8 @@ body {
 }
 
 header {
-    /* position: sticky; */
-    /* top: 0; */
+    position: sticky;
+    top: 0;
     z-index: 100;
     display: grid;
     grid-template-columns: 4fr 1fr;
@@ -117,6 +117,10 @@ footer {
     width: 100vw;
 }
 
+#contact {
+    text-align: center;
+}
+
 .meniu {
     position: sticky;
     top: 0;
@@ -146,57 +150,11 @@ nav {
 
 .link {
     font-size: x-large;
-}
-
-.filme {
-    display: flex;
-    flex-direction: row;
-    column-gap: 4vw;
-    justify-content: center;
-}   
+}  
 
 h1 {
     letter-spacing: 2px;
     font-size: 50px;
-}
-
-
-.film {
-    width: 55vh;
-    height: 50vh;
-    padding-left: 3px;
-    padding-right: 3px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid var(--yellow);
-    border-radius: 5%;
-    transition: 0.2s;
-    overflow: scroll;
-}
-
-.title {
-    font-size: large;
-}
-
-.poza {
-    padding-top: 10px;
-    height: 20vh;
-    width: 18vw;
-}
-
-#doc > a > img {
-    height: 18vh;
-    width: 18vw;
-}
-
-#mater > a > img {
-    height: 20vh;
-    width: 15vw;
-}
-
-p, h2, h3 {
     text-align: center;
 }
 
@@ -204,22 +162,9 @@ p, h2, h3 {
     font-size: x-large;
 }
 
-
-.film:hover, .character:hover {
-    box-shadow: 0 0 10px 8px red;
-    transform: scale(105%);
-}
-
-#sally:hover {
-    box-shadow: 0 0 10px 8px rgb(96, 159, 252);
-}
-
-#mater:hover {
-    box-shadow: 0 0 10px 8px lightgrey;
-}
-
-#doc:hover {
-    box-shadow: 0 0 10px 8px darkblue;
+.trailer {
+    width: 560px; 
+    height: 315px;
 }
 
 @font-face {
@@ -232,19 +177,78 @@ p, h2, h3 {
     src: url("resources/work-sans.ttf");
 }
 
+.movie {
+    padding-left: 3vw;
+    padding-right: 3vw;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
+}
 
-p, h3, h4, a {
+.imagine-v {
+    width: 20vw;
+    float: right;
+    margin-left: 2vw;
+    border-radius: 2%;
+    /* height: 70vh; */
+}
+
+.imagine-o {
+    width: 30vw;
+    float: right;
+    margin-left: 2vw;
+    border-radius: 2%;
+}
+
+.imagine-p {
+    width: 40vw;
+    float: right;
+    margin-left: 2vw;
+    border-radius: 2%;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    border: 3px solid var(--yellow);
+    border-radius: 3%;
+}
+
+
+p, h3, h4, a, li {
     font-family: work-sans;
     color: var(--yellow);
     text-decoration: none;
-
-    /* border: 5px solid red; */
 }
 
-h1, h2{
+h3 {
+    text-decoration: underline;
+    /* font-style: italic; */
+}
+
+p, li {
+    font-size: 1.1vw;
+}
+
+h1, h2 {
     color: var(--yellow);
     font-family: bangers;
+}
+
+h2 {
     padding-left: 50px;
+}
+
+#second, #third {
+    margin-bottom: 15vh;
+}
+
+
+h2:not(#kachow) {
+    font-size: 30px;
+    padding-top: 5vh;
+    /* margin-top: 30vh; */
 }
 
 .link {
@@ -261,73 +265,25 @@ h1, h2{
     filter: brightness(150%);
 }
 
-.poster {
-    margin-left: 3.8vw;
-    width: 20vw;
-    height: 23vh;
-    border-radius: 5%;
-}
-
-#character-title {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    text-align: center;
-}
-
-.personaje {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    row-gap: 10%;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 80% 10%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    padding-right: 20%;
-    grid-template-areas: "a b" "c d";
-}
-
-.character {
-    height: 40vh;
-    width: 30vw;
-    border: 2px solid var(--yellow);
-    border-radius: 5%;
-    transition: 0.2s;
-    overflow: scroll;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-.character > a {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 @media (orientation: landscape) and (max-width: 70em) {
+    .imagine-o {
+        height: 20vw;
+    }
+    .imagine-p {
+        height: 30vw;
+    }
+    .imagine-v {
+        width: 15vw;
+    }
+    iframe {
+        transform: scale(80%);
+    }
     .bonus {
         display: none;
     }
-    .character {
-        height: 32vh;
-        width: 28vw;
-    }
-    .film {
-        height: 35vh;
-        width: 25vw;
-    }
-    .filme {
-        padding-left: 5px;
-        padding-right: 5px;;
-    }
     h1, h2 {
         font-size: xx-large;
-    }
-    .poster {
-        margin-top: 1vh;
-        margin-left: 0;
-        transform: scale(90%);
     }
     .link, #contact > p {
         font-size: medium
@@ -335,29 +291,23 @@ h1, h2{
 }
 
 @media (orientation: landscape) and (max-width: 40em) {
-    .bonus, .title, #kachow {
+    .imagine-o {
+        height: 15vw;
+    }
+    .imagine-p {
+        height: 25vw;
+    }
+    .imagine-v {
+        width: 15vw;
+    }
+    iframe {
+        transform: scale(50%);
+    }
+    #kachow {
         display: none;
-    }
-
-    .character {
-        height: 32vh;
-        width: 28vw;
-    }
-    .film {
-        height: 35vh;
-        width: 25vw;
-    }
-    .filme {
-        padding-left: 5px;
-        padding-right: 5px;;
     }
     h1, h2 {
         font-size: large;
-    }
-    .poster {
-        margin-top: 1vh;
-        margin-left: 0;
-        transform: scale(90%);
     }
     .link, #contact > p {
         font-size: 3vh;
@@ -365,6 +315,15 @@ h1, h2{
 }
 
 @media (orientation: portrait){
+    .imagine-o {
+        height: 25vw;
+    }
+    .imagine-p {
+        height: 30vw;
+    }
+    .imagine-v {
+        width: 50vw;
+    }
     .meniu > nav {
         display: flex;
         flex-direction: row;
@@ -390,28 +349,17 @@ h1, h2{
         position: static;
         height: 12vh;
     }
-    .character {
-        height: 32vh;
-        width: 28vw;
-    }
-    .film {
-        height: 35vh;
-        width: 25vw;
-    }
     h1, h2 {
         /* position: static; */
         padding-top: 5vh;
         text-align: center;
         font-size: xx-large;
     }
-    #movies > h1, #character-title {
-        padding-left: 0;
-    }
-    .poster {
-        margin-left: 10vw;
-    }
     #kachow{
         display: none;
+    }
+    .trailer {
+        width: 80vw;
     }
     nav {
         padding-top: 2vh;
@@ -419,41 +367,8 @@ h1, h2{
         flex-direction: column;    
         row-gap: 0.5vh;
     }
-    .personaje, .filme {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 5vh;
-        padding-bottom: 5vh;
-        padding-top: 5vh;
-        padding-left: 0;
-        padding-right: 0;
-        overflow: hidden;
-    }
-    .film {
-        width: 80vw;
-        height: 45vh;
-    }
-    .character {
-        width: 80vw;
-        height: 40vh;
-    }
-    .poster, .poza, #doc > a > img, #mater > a > img {
-        width: 60vw;
-        height: 20vh;
-    }
-    #img1 {
-        transform: translate(80vw, 0) rotate(-6deg);
-    }
-    #img2 {
-        transform: translate(0, 0);
-    }
-    #lumina {
-        transform: translate(-51vw, 2vh);
-    }
-    #text {
-        transform: translate(-150vw, -11vh) rotate(-10deg);
+    p, li {
+        font-size: 3vw;
     }
 }
 /* 
