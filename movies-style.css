@@ -4,7 +4,7 @@ body {
     margin: 0;
     background-color: #575756;
     background: url(resources/bg.jpg) fixed 50% 50%; 
-    background-repeat: repeat-x;
+    background-repeat: repeat;
 }
 
 header {
