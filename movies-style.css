@@ -268,15 +268,15 @@ h2:not(#kachow) {
 
 @media (orientation: landscape) and (max-width: 70em) {
     .imagine-o {
-        height: 20vw;
+        height: 45vw;
         width: auto;
     }
     .imagine-p {
-        height: 30vw;
+        height: 50vw;
         width: auto;
     }
     .imagine-v {
-        width: 15vw;
+        width: 40vw;
         height: auto;
     }
     iframe {
